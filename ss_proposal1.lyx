@@ -1,0 +1,1398 @@
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+Proposal for INCF Training in neuroinformatics: Software development for
+ reproducible neuroimaging research in Python.
+ 
+\end_layout
+
+\begin_layout Section
+\noindent
+Topic
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+As the complexity of computational methods used in scientific research increases
+, there is also an increasing awareness of the need to develop methods to
+ maintain the reproducibility of research results (as expressed, for example,
+ in an editorial in 
+\emph on
+Nature
+\emph default
+ on February 17th, 2011).
+ This concern is particularly pertinent for neuroimaging, a field which
+ often requires many steps of computation to be performed on large, complex
+ data sets.
+ Python is increasingly becoming the lingua franca of reproducible research
+ in many fields, including neuroscience.
+ This course will teach neuroimaging researchers to use modern open-source
+ software development tools, in order to conduct reproducible research.
+ The course will teach best practices in software development (“software
+ carpentry”, 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://software-carpentry.org"
+
+\end_inset
+
+), as well as specific solutions to analysis problems in neuroimaging, with
+ an emphasis on problem-solving with real data.
+ The first day of the course will focus on the basic Python stack of tools
+ for scientific programming (version control, ipython, numpy, scipy, matplotlib,
+ etc.).
+ Days 2-4 will each be divided into three two-hour sessions devoted to general
+ topics, such as statistics, machine learning, time series analysis, and
+ visualization, as well as presenting several neuroimaging-specific Python
+ libraries including nipy, dipy, nibabel, nitime, pymvpa, and nipype (see
+ http://nipy.org).
+ The last day of the course will have the students work in small groups
+ (2-3 people) on selected team projects to analyze real data using the tools
+ we've presented.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+The course will fill gaps in the traditional training of practitioners of
+ neuroimaging: though some scientists in this field receive formal training
+ in programming and fundamentals of computer science, there is very little
+ training available in neuroinformatics.
+ In order to focus the scope of the course, we have defined the following
+ three major goals of learning: 
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align block
+Participants will acquire computing practices to facilitate reproducible
+ research.
+ This included knowledge in practices of scientific software engineering
+ and knowledge of specific tools for version control, data handling, collaborati
+on and documentation, which facilitate these practices.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align block
+Participants will acquire knowledge and skills in neuroimaging data analysis.
+ In particular, participants will acquire domain-specific knowledge in a
+ variety of topics in modern neuorimaging, including diffusion imaging,
+ time-series analysis, machine learning, graph-theory, etc.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align block
+Through interaction with instructors and practical exercises, participants
+ will gain confidence in their programming skills and will increase their
+ capacity to productively perform reproducible computational analysis, to
+ answer a variety of scientific questions.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+Fulfilling these goals will also provide us with a clear measure of the
+ success of the training.
+\end_layout
+
+\begin_layout Section
+\noindent
+Target audience
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+Neuroimaging researchers (mainly graduate students and post-doctoral researchers
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Target groups 3 and 4 in the summary of the 1st INCF Workshop on Needs for
+ Training in Neuroinformatics (2008)
+\end_layout
+
+\end_inset
+
+) interested in learning best practices in the use and development of reproducib
+le research tools.
+ The target audience are researchers with some programming experience in
+ Matlab, Python, or C/C++.
+ The course will admit 30 participants, to maintain a good instructor/student
+ ratio.
+ In particular, we will seek to make the course available to members of
+ groups under-represented in neuroinformatics, such as women.
+\end_layout
+
+\begin_layout Section
+\noindent
+Organizers
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+Matthew Brett, Jarrod Millman, Fernando Perez, Ariel Rokem.
+\end_layout
+
+\begin_layout Section
+\noindent
+Dates
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+August 5th - August 10th, 2012
+\end_layout
+
+\begin_layout Section
+\noindent
+Location
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+University of California, Berkeley (USA)
+\end_layout
+
+\begin_layout Section
+\noindent
+Time table
+\end_layout
+
+\begin_layout Paragraph*
+Sunday evening: 
+\end_layout
+
+\begin_layout Standard
+Arrival in Berkeley
+\end_layout
+
+\begin_layout Paragraph*
+Monday
+\end_layout
+
+\begin_layout Standard
+10-12 AM: Overview and Introduction to neuroinformatics and reproducible
+ research (Jarrod Millman)
+\end_layout
+
+\begin_layout Standard
+1-3 PM: Scientific computing with Python (numpy/scipy/matplotlib/ipython;
+ Fernando Perez and Stefan van der Walt)
+\end_layout
+
+\begin_layout Standard
+4-6 PM: Version control and literate programming (git/github/sphinx; Matthew
+ Brett and Fernando Perez)
+\end_layout
+
+\begin_layout Paragraph
+Tuesday 
+\end_layout
+
+\begin_layout Standard
+10-12 AM: Neuroimaging data formats (nibabel/nipy; Matthew Brett and Michael
+ Hanke)
+\end_layout
+
+\begin_layout Standard
+1-3 PM: Image processing (nipy/scikits.image; Stefan van der Walt)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+\begin_inset Tabular
+<lyxtabular version="3" rows="23" columns="4">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sunday evening: Arrival at Berkeley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Topic
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Software library
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Instructors (confirmed)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Monday
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10-12 AM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Overview and Introduction to neuroinformatics and reproducible research
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jarrod Millman
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-3 PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Scientific computing with Python 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+numpy/scipy/matplotlib/ipython 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fernando Perez and Stefan van der Walt 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4-6 PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version control and literate programming
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+git/github/sphinx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Matthew Brett and Fernando Perez
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tuesday
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10-12 AM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Neuroimaging data formats
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nibabel/nipy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Matthew Brett and Michael Hanke
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-3 PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Image processing
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nipy/scikits.image
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stefan van der Walt
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4-6 PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Statistics
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nipy/scipy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Jonathan Taylor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wedensday
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10-12 AM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Analysis pipelines and data bases
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nipype
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Satra Ghosh and Chris Filo Gorgolewksi
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-3 PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Machine learning
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+pymvpa/scikits.learn
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Yaroslav Halchenko, Michael Hanke and Gael Varoquaux
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4-6 PM 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Visualization
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+mayavi/connectome viewer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gael Varoquaux and Stephan Gerhard
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Thursday
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10-12 AM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time-series analysis
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nitime/mne
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ariel Rokem and Alexander Gramfort
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1-3 PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Graph Theory
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+brainx
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Caterina Gratton and Emi Nomura
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4-6 PM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diffusion imaging
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dipy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eleftherios Garyfilladis
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Friday
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9-12 AM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Project preparation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2-6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Project presentation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Evening
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Farewell dinner
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Saturday morning
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+breakfast and travel from Berkeley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+\noindent
+Content
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Introduction to neuroinformatics and reproducible research (Jarrod)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Scientific computing with Python (Fernando/Stefan)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Version control and literate programming (Matthew/Fernando)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Neuroimaging data formats (Matthew/Michael)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Image processing (Stefan vdW) 
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Statistics (Jonathan)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Pipelines and data-bases (Satra/Chris) 
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Machine learning (Gael/Yaroslav/Michael)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Visualization (Gael/Stephan G)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Time-series analysis (Ariel/Alex)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Graph theory (Caterina/Emi)
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Diffusion imaging (Eleftherios)
+\end_layout
+
+\begin_layout Section
+\noindent
+Draft of call
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+INCF Summer Course: Software development for reproducible neuroimaging research
+ in Python
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+August 5th - August 10th, 2012
+\end_layout
+
+\begin_layout Subsection*
+\noindent
+University of California, Berkeley
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+Berkeley, CA, USA
+\end_layout
+
+\begin_layout Paragraph*
+\noindent
+We hereby invite applications to participate in the graduate summer school
+ on software development for neuroimaging.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+\noindent
+Rationale and goals: This course will teach neuroimaging researchers to
+ use modern open-source software development, in order to create tools for
+ reproducible research.
+ We will focus on best practices in software development, using the programming
+ language Python.
+ In addition, we will present specific solutions to analysis problems in
+ neuroimaging, with an emphasis on problem-solving with real data.
+\end_layout
+
+\begin_layout Paragraph*
+\noindent
+Target audience: Neuroimaging researchers at the graduate student or post-doc
+ level with a strong interest in learning best practices in the use and
+ development of reproducible research tools.
+ Some programming experience in Matlab, Python, or C/C++ is expected.
+ We seek to increase the opportunities given to under-represented groups
+ and encourage members of these groups to apply.
+\end_layout
+
+\begin_layout Paragraph
+\noindent
+Structure: The first day of the course will focus on basic tools for scientific
+ programming (including version control, ipython, numpy, scipy, matplotlib,
+ etc.).
+ Days 2-4 will each be divided into three two-hour sessions devoted to general
+ topics, such as statistics, machine learning, time series analysis, and
+ visualization, as well as presenting several neuroimaging-specific Python
+ libraries including nipy, dipy, nibabel, nitime, pymvpa, and nipype (see
+ http://nipy.org).
+ The last day of the course will have the students work in small groups
+ (2-3 people) on selected team projects to analyze real data using the tools
+ we've presented.
+\end_layout
+
+\begin_layout Paragraph*
+\noindent
+Confirmed tutors: Fernando Perez, Stefan van der Walt, Jarrod Millman, Matthew
+ Brett, Caterina Gratton (UC Berkeley), Ariel Rokem and Jonathan Taylor
+ (Stanford), Michael Hanke and Yaroslav Halchenko (Dartmouth), Gael Varoquax
+ (INSERM), Alex Gramfort (MGH/Harvard), Eleftherios Garyfallidis (Cambridge),
+ Satrajit Ghosh (MIT), Chris Filo Gorgolewski (University of Edinburgh),
+ Stephan Gerhard (ETH Zurich).
+\end_layout
+
+\begin_layout Paragraph*
+\noindent
+To apply: Please send an email to: nipycourse@gmail.com .
+ Please provide us with a CV, as well as a brief (200 words, or less) statement
+ of your interest in participation in the course.
+ To be considered for a travel grant, please mention this in your application
+ and ask one reference to provide a letter of recommendation to be send
+ directly to this email address.
+ If you have a github user name, please send that as well.
+ 
+\end_layout
+
+\begin_layout Section
+\noindent
+Dissemination plan
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+The course will include a tutorial on literate programming with sphinx (
+\begin_inset CommandInset href
+LatexCommand href
+target "http://sphinx.pocoo.org/"
+
+\end_inset
+
+).
+ Thus, all the teaching materials (slides, scripts, problem sets and full
+ solutions) and the projects written by the participants, will be compiled
+ and disseminated on the INCF website, will be integrated into the documentation
+ of the nipy software projects and will become part of the online documentation
+ of these software projects, which is freely available.
+ In addition, the course sessions will be video-taped and made available
+ through the INCF.
+ 
+\end_layout
+
+\begin_layout Section
+\noindent
+Benefit and relevance to INCF mission
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+As mentioned in the INCF mission statement, neuroinformatics poses a specific
+ challenge for training, as the variety of knowledge and research cultures
+ comprising neuroinformatics is only rarely combined in one single place
+ and often falls at the boundaries of traditional academic departments.
+ The training we propose will draw on the combined experience and knowledge
+ of several different neuroinformatics practitioners and provides one of
+ these rare opportunities.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+The list of instructors proposed embodies the spirit of international cooperatio
+n, which underlies the mission of the INCF, with instructors from the US,
+ from France, from Switzerland and from the UK.
+ We intend for the student population to embody this spirit, at least in
+ part, by inviting international participants to apply for travel grants,
+ which will cover the expenses of 5 such students.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+Among the three components of neuroinformatics (tools, models and data-bases),
+ this course is aimed mostly at tool-development and data analysis.
+ However, other topics such as data-base and data-sharing will be discussed.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align block
+Of the core compoetencies defined in the summary of the 1st INCF Workshop
+ on Needs for Training in Neuroinformatics held in Edinburgh in July 23-25,
+ 2008 (page 6), this course will thoroughly address the following three:
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align block
+“Knowledge of stochastic modeling, time-series analysis, exploratory data
+ analysis and applied statistics”.
+ These topics are extremely relevant for neuroimaging and will be covered
+ both at the theoretical level, as well as at the practical level.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align block
+“Ability to programme in high-level languages”.
+ Although we expect many of the participants to have at least some knowledge
+ of programming, one of the the major goals of the course is to increase
+ participants’ confidence in their programming skills to a degree where
+ they will be able to publicly share the code they use for their analysis,
+ making their analysis reproducible by others.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align block
+“Knoweldge of imaging techniques and image analysis”: This topic is also
+ central to the course an will be covered extensively, both at the theoretical
+ level and at the practical level.
+\end_layout
+
+\end_body
+\end_document
